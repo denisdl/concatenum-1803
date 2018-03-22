@@ -27,6 +27,7 @@
 
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="vendor/animate/animate.min.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -56,12 +57,12 @@
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 class="baffle">Denis Dias de Lima</h1>
-							<p class="baffle">Software Developer<br></p>
+							<span class="avatar animated fadeInDown"><img src="images/avatar.jpg" alt="" /></span>
+							<h1 class="baffle animated fadeInLeft">Denis Dias de Lima</h1>
+							<p class="baffle animated fadeInRight">Software Developer<br></p>
 						</header>
 						<footer>
-							<ul class="icons">
+							<ul class="icons animated fadeInUp">
 								<li><a href="https://www.linkedin.com/in/denisdl/" class="fa-linkedin">LinkedIn</a></li>
 								<li><a href="https://github.com/denisdl" class="fa-github">GitHub</a>
 								<li><a href="https://www.instagram.com/denisdl/" class="fa-instagram">Instagram</a></li>
@@ -87,10 +88,13 @@
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
         }
-
-        baffle('.baffle')
-          .start()
-          .reveal(1000);
+					
+				let b = baffle('.baffle', {
+						characters: 'abcdefghijklmnopqrstuvwxyz',
+						speed: 75
+				});
+				b.start()
+				b.reveal(50000)
           
 			</script>
 
